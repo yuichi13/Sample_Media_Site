@@ -1,0 +1,29 @@
+.p-post {
+
+  &__header {
+    display: flex;
+    padding-left: $space_3l;
+  }
+
+  &__date {
+    margin-right: $space_3l;
+  }
+
+  &__edit-btns {
+    margin-left: auto;
+  }
+
+  &__title {
+    font-size: $font-size_xxl;
+    font-weight: 600;
+    margin-bottom: $space_3l;
+    text-align: center;
+  }
+
+  &__thum {
+    margin-bottom: $space_3l;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60rem;
+  }
+}

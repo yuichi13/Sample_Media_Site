@@ -1,0 +1,40 @@
+.pagination {
+  display: flex;
+}
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.pagination li {
+  border-top: 1px solid rgb(224, 11, 11);
+  border-bottom: 1px solid rgb(224, 11, 11);
+  border-left: 1px solid rgb(224, 11, 11);
+  border-collapse: collapse;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 40px;
+}
+.pagination li.disabled {
+  display: none;
+}
+.pagination li:hover {
+  background: rgb(224, 11, 11);
+}
+.pagination li:last-child {
+  border-right: 1px solid rgb(224, 11, 11);
+}
+.pagination li a {
+  display: block;
+  text-align: center;
+  transition: 0ms;
+}
+.pagination li a:hover {
+  color: #fff;
+  transition: 0ms;
+}
+.pagination li.active {
+  background: rgb(224, 11, 11);
+  color: #fff;
+}

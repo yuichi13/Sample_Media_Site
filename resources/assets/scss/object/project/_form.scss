@@ -1,0 +1,105 @@
+.p-form {
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: $space_3l;
+  width: 60%;
+
+  &-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
+
+  &-group {
+    display: block;
+  }
+
+  &-control {
+    box-sizing: border-box;
+    display: block;
+    font-size: $font-size_xl;
+    width: 100%;
+  }
+
+  &-area-msg {
+    color: red;
+    height: 7rem;
+  }
+
+  &-check {
+    display: none;
+
+    &:checked + .p-form-check-part::before {
+      background: #fff;
+      color: #000;
+      content: '\f14a';
+      font-family: "Font Awesome 5 Free";
+      font-size: $font-size_xl;
+      font-weight: 400;
+    }
+
+    &-part {
+
+      &::before {
+        background: #fff;
+        color: #ccc;
+        content: '\f0c8';
+        font-family: "Font Awesome 5 Free";
+        font-size: $font-size_xl;
+        font-weight: 400;
+        margin-left: $space_l;
+        margin-right: $space_s;
+      }
+    }
+  }
+
+  &-reminder {
+    margin-top: $space_3l;
+    text-align: center;
+  }
+
+  &-fluid {
+    margin-bottom: $space_3l;
+    padding-bottom: $space_3l;
+    width: 100%;
+  }
+}
+
+#container-3column {
+  .p-form {
+    &-fluid {
+      width: 50%;
+    }
+
+    &-wrapper {
+      width: 90%;
+    }
+  }
+
+  .p-pass-edit {
+    border: 2px solid #ccc;
+    width: 40%;
+
+    &-wrapper {
+      width: 60%;
+    }
+  }
+}
+
+#container-2column {
+  .p-form {
+    &-wrapper {
+      width: 90%;
+    }
+  }
+
+  .p-pass-edit {
+    &-wrapper {
+      width: 60%;
+    }
+  }
+}

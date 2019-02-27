@@ -1,0 +1,41 @@
+.p-header {
+  align-items: center;
+  background: $color_main;
+  display: flex;
+  height: 6.5rem;
+  list-style: none;
+  justify-content: space-between;
+  padding-left: $space_3l;
+  padding-right: $space_3l;
+
+  &__title {
+    color: #fff;
+
+    a:hover {
+      color: #fff;
+    }
+  }
+}
+
+.p-menu {
+
+  display: flex;
+  height: 100%;
+
+  &-item {
+    line-height: 6.5rem;
+  }
+
+  &-link {
+    color: #fff;
+    display: block;
+    padding-left: $space_xl;
+    padding-right: $space_xl;
+
+    &:hover {
+      background: #fff;
+      color: $color_main;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+#container {
+  &-3column {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-2column {
+    display: flex;
+    justify-content: center;
+
+    #main {
+      margin-left: 20%;
+    }
+  }
+}
+
+#main {
+  width: 60rem;
+}

@@ -1,0 +1,30 @@
+.c-btn {
+  &-submit {
+
+    display: block;
+    font-size: $font-size_l;
+    padding: 5px 10px 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10rem;
+  }
+}
+
+.c-edit-btn {
+  border-radius: 5px;
+  padding: 5px 10px;
+
+  &:hover {
+    color: #fff;
+  }
+
+  &__edit {
+    background: green;
+    color: #fff;
+  }
+
+  &__delete {
+    background: red;
+    color: #fff;
+  }
+}
