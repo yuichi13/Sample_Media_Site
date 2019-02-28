@@ -161,11 +161,19 @@ class UserController extends Controller
             'email' => 'メールアドレス',
             'profile' => 'プロフィール'
         ]);
-        
-        if($request->file('avatar')){
-            $avatarname = uniqid('AVATAR_') . '.' . $request->file('avatar')->guessExtension();
-            $request->file('avatar')->move(public_path() . '/uploads/avatar/', $avatarname);
-            $avatar = '/uploads/avatar/' . $avatarname;
+
+        if($request->file('avatar') !== NULL){
+            if($request->file('avatar') !== User::find(Auth::id())->avatar){
+
+                $avatarname = uniqid('AVATAR_') . '.' . $request->file('avatar')->guessExtension();
+                $request->file('avatar')->move(storage_path('app/public/uploads/avatar/'), $avatarname);
+                $avatar = '/storage/uploads/avatar/' . $avatarname;
+
+            } else{
+                $avatar = User::find(Auth::id())->avatar;
+            }
+        } elseif(User::find(Auth::id())->avatar){
+            $avatar = User::find(Auth::id())->avatar;
         } else{
             $avatar = '';
         }

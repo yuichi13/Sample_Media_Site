@@ -47,8 +47,8 @@ class PostController extends Controller
         if(($request->file('pic')) !== NULL){
             if($request->file('pic') !== Post::find($post_id)->pic){
                 $pic_name = uniqid('PIC_') . "." . $request->file('pic')->guessExtension();
-        $request->file('pic')->move(public_path() . '/uploads/pic/', $pic_name);
-        $pic = '/uploads/' . $pic_name;
+        $request->file('pic')->move(storage_path('/app/public/uploads/pic/'), $pic_name);
+        $pic = '/storage/uploads/pic/' . $pic_name;
         
             } else{
                 $pic = Post::find($post_id)->pic;
@@ -103,8 +103,8 @@ class PostController extends Controller
         // ファイル情報を一時的に格納
         if($request->file('pic')){
         $pic_name = uniqid('PIC_') . "." . $request->file('pic')->guessExtension();
-        $request->file('pic')->move(public_path() . '/uploads/pic/', $pic_name);
-        $pic = '/uploads/pic/' . $pic_name;
+        $request->file('pic')->move(storage_path('app/public/uploads/pic/'), $pic_name);
+        $pic = '/storage/uploads/pic/' . $pic_name;
         } else{
             $pic = '';
         }
@@ -117,7 +117,6 @@ class PostController extends Controller
             'pic' => $pic
         ]);
         // 保存
-        Log::debug('デバッグするぜ');
         $post->save();
         // リダイレクト
         return redirect()->route('user.mypage');
