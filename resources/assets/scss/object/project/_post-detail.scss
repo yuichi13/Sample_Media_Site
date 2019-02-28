@@ -26,4 +26,13 @@
     margin-right: auto;
     width: 60rem;
   }
+
+  &__content {
+    font-size: $font-size_xl;
+  }
+
+  &-backBtn {
+    display: block;
+    margin-top: $space_3l;
+  }
 }

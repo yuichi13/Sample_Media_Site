@@ -22,7 +22,7 @@
         {{ $post->content }}
       </p>
     </div>
-    <a href="{{ url()->previous('home') }}">&laquo; 記事一覧に戻る</a>
+    <a href="{{ url()->previous('home') }}" class="p-post-backBtn">&laquo; 記事一覧に戻る</a>
   </div>
 
   @endsection
