@@ -15,8 +15,8 @@
         <div class="c-imgDrop-container">
             アバター画像
             <label class="c-area-drop c-avatar js-area-drop">
-              <input type="file" name="avatar" class="c-input-file js-input-file">
-              <img src="" alt="" class="c-prev-img js-prev-img">
+              <input type="file" name="avatar" value="" class="c-input-file js-input-file">
+              <img src="{{ isset($dbUserData->avatar) ? $dbUserData->avatar : '' }}" alt="" class="c-prev-img js-prev-img">
               ドラッグ＆ドロップ
             </label>
           </div>

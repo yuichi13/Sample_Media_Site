@@ -10,7 +10,7 @@
       @foreach($posts as $post)
       <a href="{{ url('post-detail', [$post->id]) }}" class="c-card">
         <div class="c-card__thumbnail">
-          <img src="{{ $post->pic() }}" alt="" class="c-card__img">
+          <img src="{{ asset($post->pic()) }}" alt="" class="c-card__img">
         </div>
         <div class="c-card__body">
           <div class="c-card__header">
