@@ -580,6 +580,15 @@ img {
   width: 60rem;
 }
 
+.p-post__content {
+  font-size: 2.4rem;
+}
+
+.p-post-backBtn {
+  display: block;
+  margin-top: 4rem;
+}
+
 .p-footer {
   background: #e00b0b;
   color: #fff;
