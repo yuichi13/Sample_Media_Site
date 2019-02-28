@@ -23,9 +23,9 @@ class Post extends Model
     public function pic()
     {
         if(!$this->pic){
-            return 'storage/uploads/pic/no-img.png';
+            return asset('storage/uploads/pic/no-img.png');
         } else{
-            return $this->pic;
+            return asset($this->pic);
         }
     }
 
