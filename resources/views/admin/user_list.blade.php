@@ -2,6 +2,7 @@
 @section('title', '管理者用ユーザーリスト')
 @section('content')
 
+<div class="c-container-fluid">
 <main class="p-admin-main">
 @foreach($u_list as $user)
 
@@ -19,4 +20,5 @@
 @endforeach
 <span class="pagination-wrapper">{{ $u_list->links() }}</span>
 </main>
+</div>
 @endsection
