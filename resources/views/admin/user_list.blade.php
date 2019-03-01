@@ -17,6 +17,6 @@
 <br>
 
 @endforeach
-<span>{{ $u_list->links() }}</span>
+<span class="pagination-wrapper">{{ $u_list->links() }}</span>
 </main>
 @endsection
