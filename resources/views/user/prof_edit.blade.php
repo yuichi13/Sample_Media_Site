@@ -44,7 +44,7 @@
           自己紹介
           <textarea name="profile" id="" cols="30" rows="10" class="p-form-control p-form-textarea js-count-val">{{ old('profile', $dbUserData->profile) }}</textarea>
         </label>
-        <p><span class="js-count-show">0</span>/500</p>
+        <p class="js-count-num"><span class="js-count-show">0</span>/<span class="js-count-limit">100</span></p>
         <div class="p-form-area-msg">
           {{ $errors->first('profile') }}
         </div>

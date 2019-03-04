@@ -88,13 +88,15 @@ class PostController extends Controller
     public function postPostArticle(Request $request)
     {
         $this->validate($request, [
-            'title' => 'required',
-            'content' => 'required',
+            'title' => 'required|max:100',
+            'content' => 'required|max:500',
             'pic' => 'image'
         ], [
-            'title.required' => ':attributeは必須です。',
-            'content.required' => ':attributeは必須です。',
-            'pic' => '画像形式ではありません。'
+            'title.required' => ':attributeは必須です',
+            'title.max' => ':attributeは:max文字以内でご入力ください',
+            'content.required' => ':attributeは必須です',
+            'content.max' => ':attributeは:max文字以内でご入力ください',
+            'pic' => '画像形式ではありません'
         ], [
             'title' => 'タイトル',
             'content' => '本文'

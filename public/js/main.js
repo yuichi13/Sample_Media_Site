@@ -10476,14 +10476,25 @@ Object(__WEBPACK_IMPORTED_MODULE_4__modules_confirm__["a" /* default */])();
 
 
 function count() {
+
   var $countVal = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.js-count-val');
   var $countShow = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.js-count-show');
+  var $countLimit = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.js-count-limit');
+  var $countNum = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.js-count-num');
+
   if ($countVal.val()) {
     $countShow.html($countVal.val().length ? $countVal.val().length : 0);
   }
+
   __WEBPACK_IMPORTED_MODULE_0_jquery___default()($countVal).on('keyup', function () {
     var val = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).val().length;
     __WEBPACK_IMPORTED_MODULE_0_jquery___default()($countShow).html(val);
+
+    if (val > Number($countLimit.html())) {
+      $countNum.addClass('hasError');
+    } else {
+      $countNum.removeClass('hasError');
+    }
   });
 };
 

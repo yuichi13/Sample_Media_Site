@@ -213,15 +213,14 @@ class UserController extends Controller
         $user = User::find(Auth::id());
         // 古いパスワードがDBにあるかチェック
         if(Hash::check($request->input('pass_old'), $user->password)){
-            Log::debug('パスワードがあります。');
+            
             $user->password = Hash::make($request->input('pass_new'));
             $user->save();
-            Log::debug('2パスワードの中身'. print_r($user->password,true));
+           
             // リダイレクト
             return redirect()->route('user.mypage')->with('message', 'パスワードを変更しました');
 
         } else{
-            Log::debug('パスワードが違います' . print_r($user->password,true));
             return redirect()->back()->with('errormsg', 'パスワードが違います ');
         }
     }

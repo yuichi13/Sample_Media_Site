@@ -35,8 +35,9 @@
 
         <label class="p-form-group">
           本文
-          <textarea name="content" id="" cols="30" rows="10" class="p-form-control p-form-textarea">{{ old('content', (isset($post)) ? $post->content : '') }}</textarea>
+          <textarea name="content" id="" cols="30" rows="10" class="p-form-control p-form-textarea js-count-val">{{ old('content', (isset($post)) ? $post->content : '') }}</textarea>
         </label>
+        <p class="js-count-num"><span class="js-count-show">0</span>/<span class="js-count-limit">500</span></p>
         <div class="p-form-area-msg">
           {{ $errors->first('content') }}
         </div>
